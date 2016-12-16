@@ -1,3 +1,6 @@
+//! This is the C FFI for the [netinfo](https://github.com/ChangSpivey/netinfo) library. See
+//! [documentation](https://docs.rs/netinfo) of the main library for more information.
+
 #![allow(non_camel_case_types)]
 #[macro_use] extern crate enum_primitive;
 extern crate netinfo;
