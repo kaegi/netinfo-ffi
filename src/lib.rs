@@ -49,7 +49,7 @@ macro_rules! check_ptr {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // C <-> Rust memory/pointer helpers
 
-pub fn vec_to_ptr_len<T>(v: Vec<T>) -> (*mut T, usize) {
+fn vec_to_ptr_len<T>(v: Vec<T>) -> (*mut T, usize) {
     let mut b = v.into_boxed_slice();
     let ptr = b.as_mut_ptr();
     let len = b.len();
@@ -57,7 +57,7 @@ pub fn vec_to_ptr_len<T>(v: Vec<T>) -> (*mut T, usize) {
     (ptr, len)
 }
 
-pub unsafe fn ptr_len_to_vec<T>(ptr: *mut T, len: usize) -> Vec<T> {
+unsafe fn ptr_len_to_vec<T>(ptr: *mut T, len: usize) -> Vec<T> {
     Box::from_raw(std::slice::from_raw_parts_mut(ptr, len)).into_vec()
 }
 
@@ -130,7 +130,7 @@ pub struct ni_ipv6_addr {
 enum_from_primitive!{
 #[repr(C)]
 #[derive(Clone, Copy)]
-pub enum ni_inout_enum {
+enum ni_inout_enum {
   NETINFO_IOT_INCOMING = 0,
   NETINFO_IOT_OUTGOING = 1,
 }
@@ -139,7 +139,7 @@ pub enum ni_inout_enum {
 enum_from_primitive!{
 #[repr(C)]
 #[derive(Clone, Copy)]
-pub enum ni_transport_type_enum {
+enum ni_transport_type_enum {
   NETINFO_TT_TCP = 0,
   NETINFO_TT_UDP = 1,
 }
