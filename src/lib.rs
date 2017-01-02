@@ -578,7 +578,7 @@ pub unsafe extern fn netinfo_stat_get_bytes_per_attr(s: ni_net_statistics, pid_o
         temp_box(s, |stat: &mut Box<NetStatistics>| {
             let pid_opt2: Option<u64> = if pid_opt == null_mut() { None } else { Some(*pid_opt) };
             let inout_opt2: Option<InoutType> = if inout_opt == null_mut() { None } else { Some(ni_inout_enum::import(*inout_opt)?.to_netinfo_type()) };
-            let tt_opt2: Option<TransportType> = if inout_opt == null_mut() { None } else { Some(ni_transport_type_enum::import(*tt_opt)?.to_netinfo_type()) };
+            let tt_opt2: Option<TransportType> = if tt_opt == null_mut() { None } else { Some(ni_transport_type_enum::import(*tt_opt)?.to_netinfo_type()) };
             *bytes_out = stat.get_bytes_by_attr(pid_opt2, inout_opt2, tt_opt2);
             Ok(())
         })
