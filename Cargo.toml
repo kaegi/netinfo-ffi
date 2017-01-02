@@ -1,6 +1,6 @@
 [package]
 name = "netinfo-ffi"
-version = "0.3.0"
+version = "0.3.1"
 authors = ["Chang Spivey <chang.spivey@gmail.com>"]
 description = "C FFI for netinfo, which groups network usage by process"
 repository = "https://github.com/ChangSpivey/netinfo-ffi"
