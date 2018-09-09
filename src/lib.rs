@@ -343,12 +343,10 @@ pub unsafe extern fn netinfo_int_get_ips(i: ni_net_interface, ip4_array_out: *mu
             let mut ipv4_vec: Vec<ni_ipv4_addr> = Vec::new();
             let mut ipv6_vec: Vec<ni_ipv6_addr> = Vec::new();
 
-            if let Some(ip_vec) = i.get_ips_as_slice() {
-                for &ip in ip_vec {
-                    match ip {
-                        IpAddr::V4(ipv4) => { ipv4_vec.push(ipv4.into()); }
-                        IpAddr::V6(ipv6) => { ipv6_vec.push(ipv6.into()); }
-                    }
+            for ip in i.get_ips() {
+                match ip {
+                    IpAddr::V4(ipv4) => { ipv4_vec.push(ipv4.into()); }
+                    IpAddr::V6(ipv6) => { ipv6_vec.push(ipv6.into()); }
                 }
             }
 
