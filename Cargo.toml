@@ -1,9 +1,9 @@
 [package]
 name = "netinfo-ffi"
 version = "0.3.1"
-authors = ["Chang Spivey <chang.spivey@gmail.com>"]
+authors = ["kaegi <kaegi.dev@gmail.com>"]
 description = "C FFI for netinfo, which groups network usage by process"
-repository = "https://github.com/ChangSpivey/netinfo-ffi"
+repository = "https://github.com/kaegi/netinfo-ffi"
 documentation = "https://docs.rs/netinfo-ffi"
 readme = "README.md"
 keywords = ["network", "profile", "usage", "netinfo", "ffi"]
