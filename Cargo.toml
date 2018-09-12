@@ -7,7 +7,7 @@ repository = "https://github.com/ChangSpivey/netinfo-ffi"
 documentation = "https://docs.rs/netinfo-ffi"
 readme = "README.md"
 keywords = ["network", "profile", "usage", "netinfo", "ffi"]
-license = "AGPL-3.0"
+license = "MIT"
 
 [lib]
 name = "netinfo"
