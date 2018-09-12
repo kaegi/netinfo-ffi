@@ -1,6 +1,6 @@
 [package]
 name = "netinfo-ffi"
-version = "0.3.1"
+version = "0.5.0"
 authors = ["kaegi <kaegi.dev@gmail.com>"]
 description = "C FFI for netinfo, which groups network usage by process"
 repository = "https://github.com/kaegi/netinfo-ffi"
